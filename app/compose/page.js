@@ -1,6 +1,8 @@
 import { createPostAction, currentUser } from "@/lib/actions";
 import { redirect } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
 export default async function ComposePage({ searchParams }) {
   const user = await currentUser();
   if (!user) redirect("/login");
